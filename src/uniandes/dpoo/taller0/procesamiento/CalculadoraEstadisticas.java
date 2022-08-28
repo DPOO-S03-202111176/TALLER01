@@ -427,6 +427,26 @@ public class CalculadoraEstadisticas
 		}
 		return elAtleta;
 	}
+	
+	/**
+	 * Retorna el pais del atleta indicado
+	 * 
+	 * @param nombreAtleta El nombre del atleta que se está buscando
+	 * @return El pais del atleta con el nombre dado o null si no se encuentra
+	 */
+	
+	public Pais buscarPaisAtleta(String nombreAtleta)
+	{
+		Pais elAtleta = null;
+		for (int i = 0; i < atletas.size() && elAtleta == null; i++)
+		{
+			if (atletas.get(i).darNombre().equals(nombreAtleta))
+				elAtleta = atletas.get(i).darPais();
+		}
+		return elAtleta;
+	}
+	
+	
 
 	/**
 	 * Retorna una colección con los nombres de los eventos
